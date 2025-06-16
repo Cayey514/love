@@ -537,46 +537,47 @@
     <div class="decor-circle circle-2"></div>
     <div class="decor-circle circle-3"></div>
     
-    <!-- Floating rings -->
+   
+<!-- Anillos flotantes -->
     <div class="floating-ring" style="top: 10%; left: 5%;">💍</div>
     <div class="floating-ring" style="top: 20%; right: 8%;">💎</div>
     <div class="floating-ring" style="bottom: 15%; left: 7%;">💎</div>
     <div class="floating-ring" style="bottom: 25%; right: 6%;">💍</div>
     
-    <!-- Navigation -->
+    <!-- menu de navegacion-->
     <nav>
         <div class="nav-links">
-            <a href="index.html" class="nav-link">Home</a>
-            <a href="memories.html" class="nav-link">Memories</a>
-            <a href="reasons.html" class="nav-link">Reasons</a>
-            <a href="heartbeat.html" class="nav-link">Heartbeat</a>
-            <a href="forever.html" class="nav-link active">Forever</a>
+            <a href="index.html" class="nav-link">Inicio</a>
+            <a href="memories.html" class="nav-link">Recuerdos</a>
+            <a href="reasons.html" class="nav-link">Razones</a>
+            <a href="heartbeat.html" class="nav-link">Latido del corazón</a>
+            <a href="forever.html" class="nav-link active">Para siempre</a>
         </div>
     </nav>
     
-    <!-- Main content -->
+    <!-- Main contentenido-->
     <div class="container">
-        <h1 class="title" id="main-title">Forever Us</h1>
+        <h1 class="title" id="main-title">Por siempre nosotros</h1>
         
         <div class="proposal-btn-container">
             <button id="proposal-btn" class="proposal-btn">
                 <div class="btn-glow"></div>
-                <span>Will You Be Mine Forever?</span>
+                <span>¿Serás mía para siempre?</span>
             </button>
         </div>
         
         <div id="acceptance-message" class="acceptance-message">
-            <h2 class="acceptance-title">Yes! Forever and Always</h2>
+            <h2 class="acceptance-title">¡Sí! Por siempre y para siempre</h2>
             <div class="emoji-container">
                 <div class="emoji" style="animation-delay: 0.1s">❤️</div>
                 <div class="emoji" style="animation-delay: 0.3s">💍</div>
                 <div class="emoji" style="animation-delay: 0.5s">💕</div>
             </div>
-            <button id="continue-btn" class="continue-btn">Continue Our Love Story</button>
+            <button id="continue-btn" class="continue-btn">Continuar nuestra historia de amor</button>
         </div>
         
         <div class="footer" id="footer">
-            <p class="animate-float">Made with ❤️ By Shobhit</p>
+            <p class="animate-float">Hecho con ❤️ Por Cayey</p>
         </div>
     </div>
 
@@ -587,7 +588,7 @@
             const acceptanceMessage = document.getElementById('acceptance-message');
             const continueBtn = document.getElementById('continue-btn');
             
-            // Create floating hearts
+            // Crea corazones flotantes
             function createHeart() {
                 const heart = document.createElement('div');
                 heart.className = 'heart';
@@ -598,13 +599,14 @@
                 heart.style.animationDuration = `${15 + Math.random() * 20}s`;
                 floatingContainer.appendChild(heart);
                 
-                // Remove heart after animation completes
+               // Eliminar el corazón después de que se complete la animación
                 setTimeout(() => {
                     heart.remove();
                 }, 35000);
             }
             
-            // Create floating petals
+            
+             // Crea pétalos flotantes
             function createPetal() {
                 const petal = document.createElement('div');
                 petal.className = 'petal';
@@ -614,13 +616,14 @@
                 petal.style.animationDuration = `${20 + Math.random() * 25}s`;
                 floatingContainer.appendChild(petal);
                 
-                // Remove petal after animation completes
+                //Quitar el pétalo después de que se complete la animación
                 setTimeout(() => {
                     petal.remove();
                 }, 45000);
             }
             
-            // Create floating bubbles
+           
+            // Crea burbujas flotantes
             function createBubble() {
                 const bubble = document.createElement('div');
                 bubble.className = 'bubble';
@@ -632,13 +635,14 @@
                 bubble.style.animationDuration = `${15 + Math.random() * 20}s`;
                 floatingContainer.appendChild(bubble);
                 
-                // Remove bubble after animation completes
+                
+               // Eliminar la burbuja después de que se complete la animación
                 setTimeout(() => {
                     bubble.remove();
                 }, 35000);
             }
             
-            // Create floating sparkles
+            // Crea destellos flotantes
             function createSparkle() {
                 const sparkle = document.createElement('div');
                 sparkle.className = 'sparkle';
@@ -649,22 +653,25 @@
                 sparkle.style.animationDuration = `${12 + Math.random() * 15}s`;
                 floatingContainer.appendChild(sparkle);
                 
-                // Remove sparkle after animation completes
+              
+                // Eliminar el brillo después de que se complete la animación
                 setTimeout(() => {
                     sparkle.remove();
                 }, 30000);
             }
             
-            // Start creating background elements
+            
+           // Comienza a crear elementos de fondo
             setInterval(createHeart, 600);
             setInterval(createPetal, 700);
             setInterval(createBubble, 500);
             setInterval(createSparkle, 400);
             
-            // Initialize GSAP
+            
+           // Inicializar GSAP
             gsap.registerPlugin();
             
-            // Animate title
+            // título animado
             gsap.to('#main-title', {
                 opacity: 1,
                 y: 0,
@@ -680,9 +687,10 @@
                 delay: 1.5
             });
             
-            // Handle proposal button click
+            
+            // Manejar el clic del botón de propuesta
             proposalBtn.addEventListener('click', function() {
-                // Create particle explosion
+                // Crear explosión de partículas
                 const rect = proposalBtn.getBoundingClientRect();
                 const centerX = rect.left + rect.width / 2;
                 const centerY = rect.top + rect.height / 2;
@@ -714,7 +722,8 @@
                     });
                 }
                 
-                // Hide button and show acceptance message
+                
+                // Ocultar botón y mostrar mensaje de aceptación
                 gsap.to(proposalBtn, {
                     opacity: 0,
                     scale: 0,
@@ -723,7 +732,7 @@
                         proposalBtn.style.display = 'none';
                         acceptanceMessage.style.display = 'flex';
                         
-                        // Animate in the acceptance message
+                        //Animar en el mensaje de aceptación
                         gsap.to(acceptanceMessage, {
                             opacity: 1,
                             scale: 1,
@@ -734,9 +743,10 @@
                 });
             });
             
-            // Continue button functionality
+            // Continuar con la funcionalidad del botón
             continueBtn.addEventListener('click', function() {
-                // Create a nice transition effect
+                
+                // Crea un bonito efecto de transición
                 document.body.style.overflow = 'hidden';
                 
                 gsap.to('.container', {
